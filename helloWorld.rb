@@ -1,1 +1,1 @@
-puts 1 + 1puts 2 + 2
+puts 1 + 1
