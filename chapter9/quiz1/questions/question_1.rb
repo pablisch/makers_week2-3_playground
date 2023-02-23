@@ -51,6 +51,7 @@
 #   methods.
 
 # You don't need to change this method!
+
 def random_card
   cards = ["two", "three", "four", "five", "six", "seven",
           "eight", "nine", "ten",
@@ -64,9 +65,8 @@ VALUES = {
   "seven" => 7, "eight" => 8, "nine" => 9, "ten" => 10, "jack" => 10,
   "queen" => 10, "king" => 10, "ace" => 11 }
 
-hand = []
-
-def score(hand)
+def score
+  if hand == nil then hand = 0
   hand << VALUES[random_card]
   hand
 end
@@ -95,4 +95,4 @@ def run_game(hand)
   puts hand.sum > 21 ? "You busted with: #{hand.sum}" : "You scored: #{hand.sum}"
 end
 
-run_game(hand)
+# run_game(hand)
