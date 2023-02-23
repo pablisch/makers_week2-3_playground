@@ -65,10 +65,10 @@ VALUES = {
   "seven" => 7, "eight" => 8, "nine" => 9, "ten" => 10, "jack" => 10,
   "queen" => 10, "king" => 10, "ace" => 11 }
 
-def score
-  if hand == nil then hand = 0
-  hand << VALUES[random_card]
-  hand
+def score(hand)
+  total = []
+  hand.each { |card| total << VALUES[card] }
+  total.sum
 end
 
 def move
@@ -83,16 +83,18 @@ def move
   end
 end
 
-def run_game(hand)
+def run_game
+  hand = []
   while true do
     if move == "stick"
       break
     else
-      score(hand)
-      puts "Score so far: #{hand.sum}"
+      hand << random_card
+      puts "Score so far: #{score(hand)}"
     end
   end
-  puts hand.sum > 21 ? "You busted with: #{hand.sum}" : "You scored: #{hand.sum}"
+  final_total = score(hand)
+  puts final_total > 21 ? "You busted with: #{final_total}" : "You scored: #{final_total}"
 end
 
-# run_game(hand)
+# run_game
