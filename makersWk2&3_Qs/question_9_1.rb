@@ -85,4 +85,4 @@ def run_game
   puts final_total > 21 ? "You busted with: #{final_total}" : "You scored: #{final_total}"
 end
 
-# run_game
+run_game
