@@ -63,7 +63,7 @@
 #   ```
 
 river = "-----,--C--,CC-CC,CC-CC"
-river_array = river.split(",")
+river_array = river.split(",") 
 level, left_right = 0, 2
 
 while true do

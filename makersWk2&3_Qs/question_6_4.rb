@@ -74,39 +74,3 @@ while true do
   end
 end
 
-# while true do
-#   act = gets.chomp
-#   if act == "quit"
-#     puts "Bye!"
-#     break
-#   else
-#     if place == 'hall'
-#       if act == "look"
-#         puts "You are standing in a hall with a marble floor. You see a door." 
-#       elsif act == "north"
-#         puts "You move north into the study."
-#         place = "study"
-#       elsif act == "south"
-#         puts "You can only move north from the hall."
-#       else
-#         puts "I'm sorry, I don't understand the command '#{act}'."
-#       end
-#     elsif place == 'study'
-#       if act == "look"
-#         puts "You are in a warm and cosy study. You see a safe. You see a desk." 
-#       elsif act == "south"
-#         puts "You move south into the hall"
-#         place = "hall"
-#       elsif act == "north"
-#         puts "You can only move south from the study."
-#       elsif act == "look at desk"
-#         puts "You see a piece of paper that reads, The combination is 2451."
-#       elsif act == "enter combination 2451"
-#         puts "You see some diamonds in the safe, pick them up and make your escape"
-#         break
-#       else
-#         puts "I'm sorry, I don't understand the command '#{act}'."
-#       end
-#     end  
-#   end
-# end
