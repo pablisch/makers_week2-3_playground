@@ -59,7 +59,7 @@ def random_card
 end
 
 VALUE = ["two" => 2, "three" => 3, "four" => 4, "five" => 5, "six" => 6, 
-  "seven" => 7, "eight => 8", "nine" => 9, "ten" => 10,
+  "seven" => 7, "eight" => 8, "nine" => 9, "ten" => 10,
   "jack" => 10, "queen" => 10, "king" => 10, "ace" => 11
 ]
 
@@ -70,5 +70,13 @@ def move
 end
 
 def score(hand)
-  hand.map { |card| }
+  hand.map { |card| VALUE(card) }.sum
+end
+
+def run_game
+  hand = []
+  until move == "stick"
+    hand << random_card
+    score(hand)
+  end
 end
