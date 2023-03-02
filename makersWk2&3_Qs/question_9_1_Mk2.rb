@@ -70,7 +70,7 @@ def move
 end
 
 def score(hand)
-  hand.map { |card| VALUE(card) }.sum
+  hand.map { |card| puts card[VALUE] }
 end
 
 def run_game
@@ -80,3 +80,5 @@ def run_game
     score(hand)
   end
 end
+
+run_game
