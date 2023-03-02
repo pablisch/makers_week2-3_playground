@@ -58,31 +58,17 @@ def random_card
   cards[rand(13)]
 end
 
-VALUES = {
-  "two" => 2, "three" => 3, "four" => 4, "five" => 5, "six" => 6,
-  "seven" => 7, "eight" => 8, "nine" => 9, "ten" => 10, "jack" => 10,
-  "queen" => 10, "king" => 10, "ace" => 11 }
-
-def score(hand)  
-  hand.inject(0) { |sum, card| sum + VALUES[card] } 
-end
+VALUE = ["two" => 2, "three" => 3, "four" => 4, "five" => 5, "six" => 6, 
+  "seven" => 7, "eight => 8", "nine" => 9, "ten" => 10,
+  "jack" => 10, "queen" => 10, "king" => 10, "ace" => 11
+]
 
 def move
-  puts "Hit or stick?"
-  choice = gets.chomp
-  return choice == "hit" ? "hit" : choice == "stick" ? "stick" : move
+  puts "hit or stick?"
+  action = gets.chomp
+  return action == "hit" ? "hit" : action == "stick" ? "stick" : move
 end
 
-def run_game
-  hand = []
-  while true do
-    break if move == "stick"
-
-    hand << random_card
-    puts "Score so far: #{score(hand)}"
-  end
-  final_total = score(hand)
-  puts final_total > 21 ? "You busted with: #{final_total}" : "You scored: #{final_total}"
+def score(hand)
+  hand.map { |card| }
 end
-
-run_game
