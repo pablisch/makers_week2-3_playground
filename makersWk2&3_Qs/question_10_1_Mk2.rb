@@ -23,3 +23,34 @@
 # * Note: When you run the automated tests, make sure to remove from
 #   the top level of the file any calls to any methods.
 
+class Todo
+  def initialize(task)
+    @task = task
+  end
+
+  def text
+    @task
+  end
+end
+
+class TodoList
+  def initialize
+    @list = []
+  end
+
+  def add(todo)
+    @list << todo.text
+  end
+
+  def print
+    # NOTE: in my original code => { |todo| puts "* #{todo}" }
+    @list.each { |todo| puts todo.prepend("* ") }
+  end
+end
+
+list = TodoList.new
+todo = Todo.new("sleep")
+todo2 = Todo.new("code")
+list.add(todo)
+list.add(todo2)
+list.print
