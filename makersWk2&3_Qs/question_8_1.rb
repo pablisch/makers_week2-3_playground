@@ -48,6 +48,6 @@ score = 0
 puts "Enter a word"
 word = gets.chomp.upcase
 
-word.each { |letter| score += VALUES[letter] }
+word.split("").each { |letter| score += VALUES[letter] }
 puts score
 
