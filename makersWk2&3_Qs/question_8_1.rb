@@ -17,15 +17,15 @@
 #   contains letters and blanks.  You can assume the word will be in
 #   uppercase.
 
-# VALUES = { /[AEIOULNRST]/ => 1, /[DG]/ => 2, /[BCMP]/ => 3, /[FHVWY]/ => 4,
-#   /K/ => 5, /[JX]/ => 8, /[QZ]/ => 10 }
-# score = 0
+VALUES = { /[AEIOULNRST]/ => 1, /[DG]/ => 2, /[BCMP]/ => 3, /[FHVWY]/ => 4,
+  /K/ => 5, /[JX]/ => 8, /[QZ]/ => 10 }
+score = 0
 
-# puts "Enter a word"
-# word = gets.chomp.upcase
+puts "Enter a word"
+word = gets.chomp.upcase
 
-# VALUES.each { |letter, value| score += (word.scan(letter).count * value) }
-# puts score
+VALUES.each { |letter, value| score += (word.scan(letter).count * value) }
+puts score
 
 # VALUES = { " " => 0, "A" => 1, "E" => 1, "I" => 1, "O" => 1, "U" => 1, "L" => 1,
 #   "N" => 1, "R" => 1, "S" => 1, "T" => 1, "D" => 2, "G" => 2, "B" => 3, "C" => 3,
